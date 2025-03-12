@@ -1,18 +1,18 @@
 #Problem2.py
 #Project Euler problem 2
 
-from NumberTests import isEven
-from NumberTests import fibonacciSequence # Corrected import statement
+from NumberTests import isPrime
 
 def main():
-  nums = fibonacciSequence(4000001) # Fixed function call
-  print (nums)
-  total = 0
-  for fib in nums:
-    if isEven(fib): #Proper indentation
-      total = total + fib
+    limit = 200000
+    total = 0
+    for num in range(2, limit):
+       num += 2
+       if isPrime(num):
+          toal += num
+          print(total)
+ 
   
-  print(total) # final answer
 
-if __name__ == '__main__':  # Fixed "__name__" check
+if __name__ == '__main__':  
   main()
